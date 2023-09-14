@@ -1,0 +1,10 @@
+# no version needed since 2020
+
+services:
+  jekyll:
+    image: bretfisher/jekyll-serve
+    command: bundle exec jekyll serve --host 0.0.0.0 --livereload --drafts
+    volumes:
+      - ./docs:/site
+    ports:
+      - '4000:4000'
