@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Homelab Pt. 1: Creating Ubuntu 22.04 VM templates with Cloud-Init support with Ansible"
+description: Using automation to simplify boring things
 categories:
   - homelab
 ---
