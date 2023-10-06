@@ -37,6 +37,7 @@ with [Ansible](https://www.ansible.com/).
 This is the Ansible playbook for creating a new API user for Terraform in Proxmox:
 
 [ansible/create-terraform-user.yaml](https://github.com/eirik-talberg/homelab/blob/aa7399575abf45c6ee4784d45e74c5754a3ef093/ansible/create-terraform-user.yaml):
+{% raw %}
 
 ```yaml
 - name: "Create API user"
@@ -92,6 +93,8 @@ This is the Ansible playbook for creating a new API user for Terraform in Proxmo
       ansible.builtin.shell:
         cmd: pveum aclmod / -user {{ user_name }}@pve -role {{ role_name }}
 ```
+
+{% endraw %}
 
 Here's what's actually going down here:
 
@@ -151,6 +154,8 @@ not likely to be used, since they are unique.
 
 [ansible/prepare-cloud-init-images.yaml](https://github.com/eirik-talberg/homelab/blob/aa7399575abf45c6ee4784d45e74c5754a3ef093/ansible/prepare-cloud-init-images.yaml):
 
+{% raw %}
+
 ```yaml
 - name: "Copy image to PVE hosts"
   hosts:
@@ -185,6 +190,8 @@ not likely to be used, since they are unique.
       ansible.builtin.shell:
         cmd: qm template {{ vm_id }}
 ```
+
+{% endraw %}
 
 To create a template for further use, we must first create a VM in the traditional way. A template in Proxmox is based
 on an existing VM. We create the VM using the `qm` API within Proxmox. The VM itself could probably have been created
