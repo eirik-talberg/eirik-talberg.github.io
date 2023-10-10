@@ -64,16 +64,6 @@ configuration files.
 
 ### Architecture
 
-This quick chart (made with [mermaid, btw!](https://mermaid.js.org/intro/)) shows the relevant machines that will be
-involved.
-
-```mermaid!
-flowchart LR
-
-    A[macos-14.0@macbook-air] -->|SSH| B(ubuntu-22.04@ws-01)
-    A -->|SSH| C(pve-8.0@pve-01)
-```
-
 My laptop acts as the controller node where Ansible runs, and it talks to a Ubuntu 22.04 workstation VM (I'll elaborate
 on this later) and the Proxmox Hypervisor node over SSH.
 
