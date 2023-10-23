@@ -159,10 +159,6 @@ Based on the image we created in the previous step, we will create a VM in Proxm
 from it. A VM template in Proxmox can be cloned fully to create new VMs many times, and is a very handy way to create a
 common setup. This could be done with many different distros, I just prefer Ubuntu.
 
-* Basert på imaget vi har laget, lager vi først en VM, som vi så lager template fra.
-* Nevne hva storage_pool, osv betyr
-* Bytte ut kode
-
 Next, we need to create a VM template in Proxmox, that can be cloned later on. The VM ID needs to be some value that is
 not likely to be used, since they are unique.
 
